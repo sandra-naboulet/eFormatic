@@ -129,7 +129,7 @@ public class HistoryManager {
         return t.isDone();
     }
 
-    public void qcmIsDone(String ean) {
+    public void setQcmDone(String ean) {
         TrainingHistory t = getTrainingHistory(ean);
 
         if (t == null) {
@@ -140,9 +140,21 @@ public class HistoryManager {
 
         if (t.getWatchedVideos().size() == t.getVideoCount()) {
             t.setDone(true);
+            t.shouldShowAlert(true);
         }
 
         saveTrainingHistory(ean, t);
+    }
+
+    public boolean qcmIsDone(String ean){
+        TrainingHistory t = getTrainingHistory(ean);
+
+        if (t == null) {
+            return false;
+        }
+
+        return t.isQCMDone();
+
     }
 
 

@@ -12,10 +12,7 @@ import com.multimedia.eformatic.R;
 import com.multimedia.eformatic.adapters.CategoryAdapter;
 import com.multimedia.eformatic.managers.CategoryManager;
 import com.multimedia.eformatic.model.Category;
-import com.multimedia.eformatic.model.Training;
 
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class CategoriesActivity extends ActionBarActivity implements View.OnClickListener, CategoryManager.CategoryRequestListener {
@@ -73,8 +70,8 @@ public class CategoriesActivity extends ActionBarActivity implements View.OnClic
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                List<Category> codeCategories = CategoryManager.getInstance().getCodeSortedCategories();
-                mAdapter = new CategoryAdapter(CategoriesActivity.this, codeCategories);
+                List<Category> infoCategories = CategoryManager.getInstance().getInfoSortedCategories();
+                mAdapter = new CategoryAdapter(CategoriesActivity.this, infoCategories);
                 if (mCategoryRecycleView != null) {
                     mCategoryRecycleView.setAdapter(mAdapter);
                 }

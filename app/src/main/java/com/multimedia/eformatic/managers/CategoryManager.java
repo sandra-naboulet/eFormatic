@@ -106,7 +106,7 @@ public class CategoryManager {
         return null;
     }
 
-    public List<Category> getCodeCategories() {
+    public List<Category> getInfoCategories() {
         for (Category c : mCategories) {
             if (c.getId().equalsIgnoreCase("55d7429d475dfe0d0030e5d1")) {
                 return c.getSubcategories();
@@ -115,15 +115,18 @@ public class CategoryManager {
         return null;
     }
 
-    public List<Category> getCodeSortedCategories() {
+    public List<Category> getInfoSortedCategories() {
+        List<Category> categories = new ArrayList<>();
         for (Category c : mCategories) {
-            if (c.getId().equalsIgnoreCase("55d7429d475dfe0d0030e5d1")) {
+            if (c.getId().equalsIgnoreCase("55d7429d475dfe0d0030e5d1") || c.getId().equalsIgnoreCase("55d7429d475dfe0d0030e582")) {
                 List<Category> subcategories = c.getSubcategories();
-                Collections.sort(subcategories, new CategoryComparator());
-                return subcategories;
+                categories.addAll(subcategories);
             }
         }
-        return null;
+
+        Collections.sort(categories, new CategoryComparator());
+        return categories;
+
     }
 
 

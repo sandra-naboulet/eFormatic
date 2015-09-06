@@ -24,6 +24,8 @@
     <string name="free">Gratuit</string>
     <string name="credits">%1$d crédits</string>
     <string name="no_qcm">Pas de QCM disponible pour cette formation</string>
+    <string name="qcm_already_done">Fait !</string>
+    <string name="qcm_done">Terminer</string>
 
     <string name="alert_credit_title">Pas assez de crédits</string>
     <string name="alert_credit_message">Vous n\'avez pas assez de crédits pour pouvoir visionner cette vidéo\n(Crédits restants : %1$d)</string>

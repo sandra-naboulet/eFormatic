@@ -41,6 +41,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
         } else {
             QcmTabFragment tab2 = new QcmTabFragment();
             Bundle extras = new Bundle();
+            extras.putString("ean", mEAN);
             extras.putString("qcm", mQcmUrl);
             tab2.setArguments(extras);
             return tab2;
