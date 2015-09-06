@@ -87,10 +87,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                 bundle.putString("itemId", vh.mItemId);
                 intent.putExtras(bundle);
                 if (vh.mIsVideo) {
-                    boolean canWatch = CreditsManager.getInstance().canWatch(vh.mItemId);
-                    int current = CreditsManager.getInstance().getCurrentCredits();
-                    int credit = vh.mNbCredits;
-                    if ((current - vh.mNbCredits) > 0) {
+                    boolean canWatch = CreditsManager.getInstance().canWatch(mEAN, vh.mItemId);
+
+                    if (canWatch) {
                         mContext.startActivity(intent);
                     } else {
                         showCreditAlert();

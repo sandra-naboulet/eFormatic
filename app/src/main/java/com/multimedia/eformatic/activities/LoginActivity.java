@@ -42,7 +42,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
     private void login() {
         // Init credits
-        CreditsManager.getInstance().saveCredits(15);
+        CreditsManager.getInstance().saveCredits(3);
 
         // Go to main activity
         Intent intent = new Intent(this, CategoriesActivity.class);

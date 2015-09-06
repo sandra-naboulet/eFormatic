@@ -110,10 +110,10 @@ public class HistoryManager {
         saveTrainingHistory(ean, t);
     }
 
-    public boolean isWatched(String ean, String id) {
+    public boolean isWatched(String ean, String videoId) {
         TrainingHistory hist = getTrainingHistory(ean);
         if (hist != null) {
-            return hist.getWatchedVideos().contains(id);
+            return hist.getWatchedVideos().contains(videoId);
         }
 
         return false;

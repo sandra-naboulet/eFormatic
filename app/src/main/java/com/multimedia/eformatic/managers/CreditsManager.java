@@ -45,6 +45,10 @@ public class CreditsManager {
     }
 
     public void removeCredit(int nbCredits, String ean, String videoId) {
+
+        if(nbCredits == -1){
+            nbCredits = 0;
+        }
         SharedPreferences prefs = EFormatic.APP_CONTEXT.getSharedPreferences(HISTORY, Context.MODE_PRIVATE);
 
         if (prefs == null) {
@@ -68,8 +72,18 @@ public class CreditsManager {
     public boolean canWatch(String ean, String itemId){
        Item item = TrainingManager.getInstance().getItem(ean, itemId);
         if(item != null){
-
+            if(item.getVideo() != null){
+                if(HistoryManager.getInstance().isWatched(ean, item.getVideo().getId())){
+                    return true;
+                }
+                else {
+                    int currentCredits = getCurrentCredits();
+                    int videoCredit = item.getNbCredits();
+                    return currentCredits - videoCredit >= 0;
+                }
+            }
         }
+        return true;
     }
 
 
