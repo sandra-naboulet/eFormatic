@@ -106,16 +106,10 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     private void showCreditAlert() {
 
         final Dialog dialog = new Dialog(mContext);
-        dialog.setContentView(R.layout.alert);
+        dialog.setContentView(R.layout.alert_credits);
 
-        TextView title = (TextView) dialog.findViewById(R.id.alert_title);
         TextView message = (TextView) dialog.findViewById(R.id.alert_message);
-        ImageView icon = (ImageView) dialog.findViewById(R.id.alert_icon);
-
-        title.setText(EFormatic.RESOURCES.getString(R.string.alert_credit_title));
         message.setText(EFormatic.RESOURCES.getString(R.string.alert_credit_message, CreditsManager.getInstance().getCurrentCredits()));
-
-        icon.setImageResource(R.mipmap.coin);
 
         Button button = (Button) dialog.findViewById(R.id.alert_button);
 

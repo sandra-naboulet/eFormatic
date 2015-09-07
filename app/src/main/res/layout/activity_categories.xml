@@ -17,5 +17,10 @@
             android:layout_height="match_parent"
             android:scrollbars="vertical" />
 
+        <ProgressBar
+            android:id="@+id/categories_progressbar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"/>
     </RelativeLayout>
 </RelativeLayout>

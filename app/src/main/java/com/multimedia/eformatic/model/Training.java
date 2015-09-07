@@ -27,6 +27,7 @@ public class Training {
     String mSubtitle;
     String mEAN;
     String mHtmlDescription;
+    String mProductUrl;
     int mDuration;
     boolean mDownload;
     String mQcmUrl;
@@ -51,6 +52,7 @@ public class Training {
         this.mSubtitle = jsonObject.optString(Attributes.SUBTITLE);
         this.mEAN = jsonObject.optString(Attributes.EAN);
         this.mHtmlDescription = jsonObject.optString(Attributes.DESCRIPTION);
+        this.mProductUrl = jsonObject.optString(Attributes.PRODUCT_URL);
         this.mDuration = jsonObject.optInt(Attributes.DURATION);
         this.mDownload = jsonObject.optBoolean(Attributes.CAN_DOWNLOAD);
         this.mQcmUrl = jsonObject.optString(Attributes.QCM);
@@ -126,6 +128,14 @@ public class Training {
 
     public Bitmap getPicture() {
         return mPicture;
+    }
+
+    public String getPictureUrl() {
+        return mPictureUrl;
+    }
+
+    public String getProductUrl(){
+        return mProductUrl;
     }
 
     public int getVideoCount() {

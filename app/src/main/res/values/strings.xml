@@ -1,5 +1,8 @@
 <resources>
+
     <string name="app_name">Eformatic</string>
+    <string name="facebook_app_id">1614974675433857</string>
+
     <string name="title_activity_course">CourseActivity</string>
     <string name="title_activity_trainings">TrainingsActivity</string>
     <string name="title_activity_training">TrainingActivity</string>
@@ -30,6 +33,10 @@
     <string name="alert_credit_title">Pas assez de crédits</string>
     <string name="alert_credit_message">Vous n\'avez pas assez de crédits pour pouvoir visionner cette vidéo\n(Crédits restants : %1$d)</string>
     <string name="alert_congrats_title">Félicitations !</string>
-    <string name="alert_congrats_message">Vous venez de valider la formation : %1$s</string>
+    <string name="alert_congrats_message">Vous venez de valider la formation :</string>
+
+    <string name="alert_ok">Ok</string>
+    <string name="alert_share">Partager</string>
+    <string name="click_again_for_quit">Appuyer une seconde fois pour quitter</string>
 
 </resources>

@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.facebook.appevents.AppEventsLogger;
 import com.multimedia.eformatic.R;
 import com.multimedia.eformatic.adapters.ViewPagerAdapter;
 import com.multimedia.eformatic.google.SlidingTabLayout;
@@ -63,6 +64,14 @@ public class TrainingActivity extends ActionBarActivity {
         mTabs.setViewPager(mViewPager);
 
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        // Logs 'app deactivate' App Event.
+        AppEventsLogger.deactivateApp(this);
     }
 
 }

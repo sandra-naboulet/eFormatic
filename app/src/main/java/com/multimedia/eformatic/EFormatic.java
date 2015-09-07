@@ -13,6 +13,7 @@ public class EFormatic extends Application {
     public static Resources RESOURCES;
 
     public final static String API_URL = "http://eas.elephorm.com/api/v1/";
+    public final static int API_TIMEOUT = 5000;
 
     @Override
     public void onCreate() {

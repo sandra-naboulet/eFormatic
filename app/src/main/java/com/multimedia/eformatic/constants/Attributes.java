@@ -25,6 +25,7 @@ public class Attributes {
     public final static String CATEGORY = "category";
     public final static String SUBCATEGORY = "subcategory";
     public final static String POSTER = "poster";
+    public final static String PRODUCT_URL = "product_url";
     public final static String FIELD_POSTER = "field_poster";
     public final static String FREE = "free";
     public final static String NB_CREDITS = "nb_credits";

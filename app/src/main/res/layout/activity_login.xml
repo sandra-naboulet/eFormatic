@@ -10,43 +10,6 @@
     tools:context="com.multimedia.eformatic.activities.LoginActivity">
 
 
-    <!--  <RelativeLayout
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:padding="20dp">
-
-          <Button
-              android:id="@+id/login_title"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:background="@drawable/title_select_bg"
-              android:minHeight="40dp"
-              android:minWidth="0dp"
-              android:padding="0dp"
-              android:text="@string/login"
-              android:textAllCaps="true"
-              android:textAppearance="@android:style/TextAppearance.Medium"
-              android:textColor="@color/white" />
-
-
-          <Button
-              android:id="@+id/register_title"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginLeft="30dp"
-              android:layout_toRightOf="@id/login_title"
-              android:background="@android:color/transparent"
-              android:minHeight="40dp"
-              android:minWidth="0dp"
-              android:padding="0dp"
-              android:text="@string/register"
-              android:textAllCaps="true"
-              android:textAppearance="@android:style/TextAppearance.Medium"
-              android:textColor="@color/white" />
-
-      </RelativeLayout>-->
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,14 +17,6 @@
         android:layout_marginTop="20dp"
         android:padding="20dp">
 
-        <!--  <ImageView
-              android:id="@+id/logo"
-              android:layout_width="150dp"
-              android:layout_height="150dp"
-              android:layout_centerHorizontal="true"
-              android:src="@mipmap/ic_logo" />
-                android:layout_below="@id/logo"
-  -->
 
         <LinearLayout
             android:id="@+id/app_name"
@@ -75,18 +30,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="e"
-                android:textSize="30sp"
                 android:textAllCaps="true"
                 android:textColor="@color/orange"
-                android:textStyle="bold"/>
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:text="Formatic"
-                android:textSize="30sp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="30sp" />
 
         </LinearLayout>
 
@@ -138,11 +93,11 @@
 
         <Button
             android:id="@+id/login_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
             android:layout_below="@id/password_edittext"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:background="@color/orange"
             android:paddingLeft="35dp"
             android:paddingRight="35dp"
@@ -151,6 +106,23 @@
             android:textAppearance="@android:style/TextAppearance.Medium"
             android:textColor="@color/white" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_button"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="ou"
+            android:textColor="@color/white" />
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/fb_login_button"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/login_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal|center_vertical" />
     </RelativeLayout>
 
 

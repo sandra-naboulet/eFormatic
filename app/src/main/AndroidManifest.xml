@@ -3,6 +3,9 @@
     package="com.multimedia.eformatic">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <provider android:authorities="com.facebook.app.FacebookContentProvider1614974675433857"
+        android:name="com.facebook.FacebookContentProvider"
+        android:exported="true" />
 
     <application
         android:name=".EFormatic"
@@ -10,6 +13,11 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
         <activity
             android:name=".activities.LoginActivity"
             android:label="@string/app_name">
@@ -19,15 +27,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
         <activity
             android:name=".activities.CategoriesActivity"
-            android:label="@string/title_activity_course"></activity>
+            android:label="@string/title_activity_course"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activities.TrainingsActivity"
-            android:label="@string/title_activity_trainings"></activity>
+            android:label="@string/title_activity_trainings"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activities.TrainingActivity"
-            android:label="@string/title_activity_training"></activity>
+            android:label="@string/title_activity_training"
+            android:screenOrientation="portrait"></activity>
         <activity
 
             android:name=".activities.VideoActivity"

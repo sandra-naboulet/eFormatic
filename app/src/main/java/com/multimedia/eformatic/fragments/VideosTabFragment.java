@@ -36,6 +36,8 @@ public class VideosTabFragment extends Fragment {
 
     private String mEAN;
 
+    private boolean firstStart = true;
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,7 +45,7 @@ public class VideosTabFragment extends Fragment {
 
         mEAN = getArguments().getString("ean", "");
 
-
+        init();
     }
 
     @Override
@@ -61,15 +63,29 @@ public class VideosTabFragment extends Fragment {
         return v;
     }
 
+    private void init() {
+        Training training = TrainingManager.getInstance().getTraining(mEAN);
+        mAdapter = new ItemAdapter(getActivity(), mEAN, training.getItems());
+
+    }
+
 
     @Override
     public void onStart() {
         super.onStart();
-        Training training = TrainingManager.getInstance().getTraining(mEAN);
 
-        mAdapter = new ItemAdapter(getActivity(), mEAN, training.getItems());
-        mVideoRecycleView.setAdapter(mAdapter);
+        if (firstStart) {
+            firstStart = false;
+            mVideoRecycleView.setAdapter(mAdapter);
+        }
+
     }
 
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(mAdapter != null){
+            mAdapter.notifyDataSetChanged();
+        }
+    }
 }
