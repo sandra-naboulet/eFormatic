@@ -29,8 +29,10 @@
             android:name=".activities.TrainingActivity"
             android:label="@string/title_activity_training"></activity>
         <activity
+
             android:name=".activities.VideoActivity"
-            android:label="@string/title_activity_video"></activity>
+            android:label="@string/title_activity_video"
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

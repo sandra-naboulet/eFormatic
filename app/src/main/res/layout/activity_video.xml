@@ -1,39 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
 
     <VideoView
         android:id="@+id/video_view"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_gravity="center" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/video_view"
-        android:background="@color/white"
-        android:padding="15dp">
-
-        <TextView
-            android:id="@+id/video_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="@android:style/TextAppearance.Large"
-            android:textColor="@color/primary_light"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/video_duration"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/video_title"
-            android:layout_marginTop="10dp"
-            android:textAppearance="@android:style/TextAppearance.Small"
-            android:textColor="@color/gray" />
-
-    </RelativeLayout>
-
-</RelativeLayout>
+        android:layout_gravity="center"></VideoView>
+</FrameLayout>
